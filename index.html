@@ -1,12 +1,601 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="CV/Resume de Juan C Frias A">
-        <meta name="viewport" content="width=device=width, initial-scale : 1">
-        <title>Resume Juan Frias</title>
-    </head>
-    <body>
-        
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume — Juan C Frias A</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div id="cursor">
+  <div class="c-dot"></div>
+  <div class="c-cross"></div>
+</div>
+
+<!-- Scroll Progress -->
+<div id="progress"></div>
+
+<!-- Top Ink Rule -->
+<div class="top-rule"></div>
+
+<!-- ════════════════════════════
+     MASTHEAD
+════════════════════════════ -->
+<div class="masthead">
+  <div class="masthead-inner">
+
+    <div class="masthead-left">
+      Computer Science Student<br>
+      Available for Internships<br>
+      &amp; Junior / IT Roles
+    </div>
+
+    <div class="masthead-center">
+      <div class="name">Juan  <em>C Frias</em> Alfonso</div>
+      <div class="role">CS Student · Developer &amp; IT Support</div>
+    </div>
+
+    <div class="masthead-right">
+      JuanCFriasAlf@gmail.com<br>
+      <a href="https://github.com/JuanCFriasA">github.com/JuanCFriasA</a><br>
+      <a href="https://www.linkedin.com/in/juancfriasa/">linkedin.com/in/juancfriasa</a><br>
+      Santo Domingo, Republica Dominicana
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════
+     STICKY NAV
+════════════════════════════ -->
+<div id="nav">
+  <div class="nav-inner">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#paths">My Paths</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#goals">Goals</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <span class="nav-date"></span>
+  </div>
+</div>
+
+<!-- ════════════════════════════
+     PAGE CONTENT
+════════════════════════════ -->
+<div class="page">
+
+  <!-- ── ABOUT ── -->
+  <section class="section" id="about">
+    <div class="section-head">
+      <span class="section-num">§ 01</span>
+      <h2 class="section-title">Who I Am</h2>
+      <span class="section-rule"></span>
+    </div>
+
+    <div class="about-cols">
+
+      <div class="about-col">
+        <p>
+          I'm a <strong>Computer Science student</strong> more than halfway through my degree,
+          building a solid foundation in programming, systems thinking, and problem solving.
+        </p>
+        <p>
+          My path started with a <strong>High School Diploma</strong> focused on electronics devices hardware and software,
+          which led me naturally into computer science — and sparked a dual interest in both
+          <strong>software development</strong> and <strong>IT infrastructure</strong>.
+        </p>
+        <p>
+          I'm actively looking for a first opportunity — whether that's a dev internship,
+          a junior developer role, or an IT support position — where I can
+          contribute real value and keep learning every day.
+        </p>
+      </div>
+
+      <div class="col-divider"></div>
+
+      <div class="about-col">
+        <div class="pull-quote">
+          "I'm exploring two paths: building software
+          and keeping systems running. Both excite me —
+          and both need people who care about the details."
+        </div>
+        <p>
+          I'm comfortable learning new tools independently, troubleshooting patiently,
+          and communicating clearly with both technical and non-technical people.
+          I thrive where I'm challenged and surrounded by experienced teammates.
+        </p>
+      </div>
+
+      <div class="col-divider"></div>
+
+      <div class="about-col">
+        <div class="trait-list">
+          <div class="trait-row">
+            <span class="icon">🧠</span>
+            <div class="text"><b>Fast Learner</b>Picks up new languages, tools, and systems quickly and independently.</div>
+          </div>
+          <div class="trait-row">
+            <span class="icon">🔧</span>
+            <div class="text"><b>Problem-Solver</b>Enjoys diagnosing issues — whether it's a bug in code or a failing computer device.</div>
+          </div>
+          <div class="trait-row">
+            <span class="icon">🤝</span>
+            <div class="text"><b>People-Friendly</b>Patient and clear when helping others with technical issues.</div>
+          </div>
+          <div class="trait-row">
+            <span class="icon">📈</span>
+            <div class="text"><b>Growth Oriented</b>Treats every challenge — technical or personal — as a chance to improve.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PATHS ── -->
+  <section class="section" id="paths">
+    <div class="section-head">
+      <span class="section-num">§ 02</span>
+      <h2 class="section-title">My Two Paths</h2>
+      <span class="section-rule"></span>
+    </div>
+
+    <div class="paths-grid">
+
+      <div class="path-card path-dev">
+        <div class="path-tag">Path A</div>
+        <div class="path-icon">💻</div>
+        <div class="path-title">Software Development</div>
+        <p class="path-body">
+          My academic foundation in CS gives me the tools to write, read, and reason about code.
+          I'm interested in backend or full-stack development — building APIs, writing clean logic,
+          and eventually owning features end to end.
+        </p>
+        <div class="path-seeking">
+          <span class="seeking-label">Seeking:</span>
+          <span class="seeking-val">Internship · Junior Dev </span>
+        </div>
+      </div>
+
+      <div class="path-card path-it">
+        <div class="path-tag">Path B</div>
+        <div class="path-icon">🖥️</div>
+        <div class="path-title">IT Support &amp; Systems</div>
+        <p class="path-body">
+          I genuinely enjoy troubleshooting — diagnosing why something isn't working and fixing it
+          methodically. I'm comfortable with operating systems, networking basics, and helping
+          users navigate technical problems calmly and efficiently.
+        </p>
+        <div class="path-seeking">
+          <span class="seeking-label">Seeking:</span>
+          <span class="seeking-val">Help Desk · IT Support </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── EDUCATION ── -->
+  <section class="section" id="education">
+    <div class="section-head">
+      <span class="section-num">§ 03</span>
+      <h2 class="section-title">Education</h2>
+      <span class="section-rule"></span>
+    </div>
+
+    <div class="edu-grid">
+
+      <div class="edu-card">
+        <div class="edu-tag">Completed</div>
+        <div class="edu-degree">High School Diploma</div>
+        <div class="edu-school">Instituto Tecnologico de Artes y Oficios · 2017 – 2021</div>
+        <p class="edu-body">
+          Expertise in hardware-level diagnostics and component-level repair of electronic systems.
+          Skilled in interpreting electrical schematics and technical documentation for troubleshooting.
+          Strong foundation in circuit theory, aiding in the understanding of low-level systems and computer architecture.
+          
+        </p>
+        <div class="course-pills">
+          <span class="pill">Circuit Analysis</span>
+          <span class="pill">Component-Level Repair</span>
+          <span class="pill">Schematic Reading</span>
+          <span class="pill">Precision Soldering</span>
+          <span class="pill">Signal Diagnostics</span>
+          <span class="pill">Digital Logic Gates</span>
+          <span class="pill">Hardware Maintenance</span>
+
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-tag">Present</div>
+        <div class="edu-degree">Computer Science degree</div>
+        <div class="edu-school">Universidad Autonoma de Santo Domingo · 2021 – Present</div>
+        <p class="edu-body">
+          A rigorous 4-year program focused on the scientific foundations of computing and the development of scalable software solutions. 
+          The curriculum emphasizes mathematical logic, algorithmic efficiency, and the management of complex information systems.
+
+        </p>
+        <div class="course-pills">
+          <span class="pill">Discrete Mathematics</span>
+          <span class="pill">Algorithm Analysis</span>
+          <span class="pill">Data Structures</span>
+          <span class="pill">Relational Databases</span>
+          <span class="pill">Object-Oriented Programming</span>
+          <span class="pill">Operating Systems Fundamentals</span>
+          <span class="pill">Infrastructure & Networking</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section class="section" id="skills">
+    <div class="section-head">
+      <span class="section-num">§ 04</span>
+      <h2 class="section-title">Skills &amp; Tools</h2>
+      <span class="section-rule"></span>
+    </div>
+
+    <!-- Row 1: Dev skills -->
+    <div class="skills-label">Development</div>
+    <div class="skills-wrap">
+
+      <div class="skill-section">
+        <div class="skill-section-title">Programming</div>
+        <div class="skill-entry" data-level="5">
+          <span class="skill-entry-name">Python</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="3">
+          <span class="skill-entry-name">Java</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="3">
+          <span class="skill-entry-name">JavaScript</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="3">
+          <span class="skill-entry-name">C / C++</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="4">
+          <span class="skill-entry-name">HTML &amp; CSS</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-section">
+        <div class="skill-section-title">Dev Tools &amp; Concepts</div>
+        <div class="skill-entry" data-level="5">
+          <span class="skill-entry-name">Git &amp; GitHub</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="4">
+          <span class="skill-entry-name">SQL / Databases</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="4">
+          <span class="skill-entry-name">OOP Design</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="4">
+          <span class="skill-entry-name">Data Structures</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="2">
+          <span class="skill-entry-name">REST APIs</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-section">
+        <div class="skill-section-title">Environments</div>
+        <div class="skill-entry" data-level="5">
+          <span class="skill-entry-name">VS Code</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="2">
+          <span class="skill-entry-name">Linux / CLI</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="3">
+          <span class="skill-entry-name">Docker (basic)</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="2">
+          <span class="skill-entry-name">Agile / Scrum</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="1">
+          <span class="skill-entry-name">Cloud basics (AWS)</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Row 2: IT skills -->
+    <div class="skills-label skills-label--it">IT Support</div>
+    <div class="skills-wrap skills-wrap--it">
+
+      <div class="skill-section">
+        <div class="skill-section-title">Operating Systems</div>
+        <div class="skill-entry" data-level="4">
+          <span class="skill-entry-name">Windows 10/11</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="3">
+          <span class="skill-entry-name">Linux (Ubuntu)</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="3">
+          <span class="skill-entry-name">macOS</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="2">
+          <span class="skill-entry-name">Active Directory</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-section">
+        <div class="skill-section-title">Networking</div>
+        <div class="skill-entry" data-level="3">
+          <span class="skill-entry-name">TCP/IP &amp; DNS</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="3">
+          <span class="skill-entry-name">DHCP / Routing</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="2">
+          <span class="skill-entry-name">VPN / Firewalls</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="2">
+          <span class="skill-entry-name">Wi-Fi Troubleshoot</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-section">
+        <div class="skill-section-title">Support &amp; Tools</div>
+        <div class="skill-entry" data-level="4">
+          <span class="skill-entry-name">Hardware Troubleshoot</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="3">
+          <span class="skill-entry-name">Ticketing Systems</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="3">
+          <span class="skill-entry-name">Microsoft 365</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+        <div class="skill-entry" data-level="2">
+          <span class="skill-entry-name">Remote Desktop</span>
+          <div class="dots"><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Language strip -->
+    <div class="lang-strip">
+      <div class="lang-block">
+        <span class="ln">Spanish</span>
+        <span class="lv">Native</span>
+      </div>
+      <div class="lang-block">
+        <span class="ln">English</span>
+        <span class="lv">Professional (B2)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section class="section" id="projects">
+    <div class="section-head">
+      <span class="section-num">§ 05</span>
+      <h2 class="section-title">Projects</h2>
+      <span class="section-rule"></span>
+    </div>
+
+    <p class="section-note">
+      Working on that...
+    </p>
+
+    <div class="projects-grid">
+
+    
+    
+
+    </div>
+  </section>
+
+  <!-- ── CERTIFICATES ── -->
+  <section class="section" id="certificates">
+    <div class="section-head">
+      <span class="section-num">§ 06</span>
+      <h2 class="section-title">Certificates</h2>
+      <span class="section-rule"></span>
+    </div>
+
+    <p class="section-note">
+      Certifications I've earned or am actively working toward. Each one signals a commitment
+      to professional growth beyond the classroom.
+    </p>
+
+    <div class="certs-grid">
+
+      <!-- EARNED CERT -->
+      <div class="cert-card cert-earned">
+        <div class="cert-badge">✓</div>
+        <div class="cert-body">
+          <div class="cert-issuer">Add Issuer (e.g. Coursera · Google · Cisco)</div>
+          <div class="cert-name">Your Earned Certificate Name</div>
+          <div class="cert-meta">
+            <span class="cert-date">Month 20XX</span>
+            <span class="cert-id">Credential ID: XXXX-XXXX</span>
+          </div>
+          <p class="cert-desc">
+            Brief description of what this certificate covers and why it's relevant to your goals.
+            Replace with your real cert details.
+          </p>
+          <a href="#" class="cert-verify">Verify credential →</a>
+        </div>
+      </div>
+
+      <!-- EARNED CERT 2 -->
+      <div class="cert-card cert-earned">
+        <div class="cert-badge">✓</div>
+        <div class="cert-body">
+          <div class="cert-issuer">Add Issuer (e.g. freeCodeCamp · Udemy · edX)</div>
+          <div class="cert-name">Your Second Certificate Name</div>
+          <div class="cert-meta">
+            <span class="cert-date">Month 20XX</span>
+            <span class="cert-id">Credential ID: XXXX-XXXX</span>
+          </div>
+          <p class="cert-desc">
+            What you learned and how it connects to your dev or IT path. Keep it short and specific.
+          </p>
+          <a href="#" class="cert-verify">Verify credential →</a>
+        </div>
+      </div>
+
+      <!-- IN PROGRESS CERT -->
+      <div class="cert-card cert-progress">
+        <div class="cert-badge cert-badge--progress">~</div>
+        <div class="cert-body">
+          <div class="cert-issuer">CompTIA</div>
+          <div class="cert-name">CompTIA A+</div>
+          <div class="cert-meta">
+            <span class="cert-date">Expected: 20XX</span>
+            <span class="cert-status--progress">Studying</span>
+          </div>
+          <p class="cert-desc">
+            Industry-standard entry-level IT certification covering hardware, operating systems,
+            networking, and troubleshooting. Core credential for IT support roles.
+          </p>
+          <div class="cert-progress-bar">
+            <div class="cert-progress-fill" data-pct="45"></div>
+          </div>
+          <span class="cert-progress-label">~45% through study material</span>
+        </div>
+      </div>
+
+      <!-- PLANNED CERT -->
+      <div class="cert-card cert-planned">
+        <div class="cert-badge cert-badge--planned">○</div>
+        <div class="cert-body">
+          <div class="cert-issuer">CompTIA</div>
+          <div class="cert-name">CompTIA Network+</div>
+          <div class="cert-meta">
+            <span class="cert-date">Planned after A+</span>
+            <span class="cert-status--planned">Queued</span>
+          </div>
+          <p class="cert-desc">
+            Validates core networking skills including configuration, management, and troubleshooting
+            of wired and wireless networks. Highly valued in IT support and sysadmin tracks.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── GOALS ── -->
+  <section class="section" id="goals">
+    <div class="section-head">
+      <span class="section-num">§ 07</span>
+      <h2 class="section-title">What I'm Looking For</h2>
+      <span class="section-rule"></span>
+    </div>
+
+    <div class="goals-grid">
+      <div class="goal-box" data-num="I">
+        <span class="goal-icon">💻</span>
+        <div class="goal-title">Dev Internship or Junior Role</div>
+        <p class="goal-body">Looking to write real code on real products. Backend or full-stack preferred, but open to anything that gets me building.</p>
+      </div>
+      <div class="goal-box" data-num="II">
+        <span class="goal-icon">🖥️</span>
+        <div class="goal-title">IT Support / Help Desk</div>
+        <p class="goal-body">Genuinely enjoy troubleshooting. Looking for a Tier 1 or Tier 2 support role where I can solve problems and help people daily.</p>
+      </div>
+      <div class="goal-box" data-num="III">
+        <span class="goal-icon">🎓</span>
+        <div class="goal-title">Finish My CS Degree</div>
+        <p class="goal-body">Committed to completing my degree while gaining real experience. Academic and professional growth at the same time.</p>
+      </div>
+      <div class="goal-box" data-num="IV">
+        <span class="goal-icon">📜</span>
+        <div class="goal-title">IT Certifications</div>
+        <p class="goal-body">Planning to pursue CompTIA A+ and Network+ to strengthen my IT support profile and show employers I'm serious about this path.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="section" id="contact">
+    <div class="section-head">
+      <span class="section-num">§ 08</span>
+      <h2 class="section-title">Let's Talk</h2>
+      <span class="section-rule"></span>
+    </div>
+
+    <div class="contact-layout">
+      <div class="contact-intro">
+        <div class="big">Ready to<br><em>get started.</em></div>
+        <p>
+          I'm open to developer roles, IT support positions, or anything in between.
+          If you have an opportunity, a project, or just want to connect —
+          reach out. I respond fast.
+        </p>
+      </div>
+
+      <table class="contact-table">
+        <tr>
+          <td>Email</td>
+          <td><a href="mailto:JuanCFriasAlf@gmail.com">JuanCFriasAlf@gmail.com</a></td>
+        </tr>
+        <tr>
+          <td>LinkedIn</td>
+          <td><a href="https://www.linkedin.com/in/juancfriasa/" target="_blank">linkedin.com/in/juancfriasa</a></td>
+        </tr>
+        <tr>
+          <td>GitHub</td>
+          <td><a href="https://github.com/JuanCFriasA" target="_blank">github.com/JuanCFriasAlf</a></td>
+        </tr>
+        <tr>
+          <td>Location</td>
+          <td>Santo Domingo, Republica Dominicana</td>
+        </tr>
+        <tr>
+          <td>Status</td>
+          <td class="status-open">Open to opportunities</td>
+        </tr>
+      </table>
+
+    </div><!-- /contact-layout -->
+  </section><!-- /contact -->
+
+  <footer>
+    <span>© 2026 Juan C. Frias A.</span>
+  </footer>
+
+</div><!-- /page -->
+
+
+<script src="main.js"></script>
+</body>
 </html>
