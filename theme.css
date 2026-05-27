@@ -1,0 +1,179 @@
+/* ─── DARK MODE ─── */
+[data-theme="dark"] {
+  --white: #0F0F0E;
+  --ink: #F0EFE9;
+  --ink-light: #C5C4BC;
+  --ink-muted: #7A7A75;
+  --accent: #5B8EF0;
+  --accent-light: #1A2340;
+  --accent-mid: #2A3D6B;
+  --border: #252523;
+  --surface: #161614;
+  --tag-bg: #1F1F1C;
+}
+[data-theme="dark"] nav {
+  background: rgba(15,15,14,0.9);
+}
+[data-theme="dark"] .hero-grid-bg {
+  opacity: 0.25;
+}
+[data-theme="dark"] .about-card,
+[data-theme="dark"] .edu-degree-card,
+[data-theme="dark"] .edu-coursework,
+[data-theme="dark"] .edu-card,
+[data-theme="dark"] .skill-card,
+[data-theme="dark"] .cert-card,
+[data-theme="dark"] .project-card {
+  background: #161614;
+}
+[data-theme="dark"] .about-stat {
+  background: #0F0F0E;
+}
+[data-theme="dark"] .edu-course-item {
+  background: #0F0F0E;
+}
+[data-theme="dark"] .learning-chip {
+  background: #161614;
+}
+[data-theme="dark"] .contact-card {
+  background: rgba(255,255,255,0.04);
+}
+[data-theme="dark"] #contact {
+  background: #070706;
+}
+
+/* ─── CONTROLS BAR ─── */
+.controls-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ctrl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.32rem 0.75rem;
+  border-radius: 99px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.02em;
+  font-family: 'DM Sans', sans-serif;
+}
+.ctrl-btn:hover {
+  color: var(--ink);
+  border-color: var(--ink-muted);
+}
+.ctrl-btn.active {
+  background: var(--ink);
+  color: var(--white);
+  border-color: var(--ink);
+}
+.lang-divider {
+  width: 1px;
+  height: 14px;
+  background: var(--border);
+  margin: 0 0.15rem;
+}
+.theme-icon { font-size: 0.85rem; }
+
+/* ─── ABOUT PHOTO ─── */
+.about-photo-wrapper img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  max-height: 340px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+
+/* ─── EXPERIENCE SECTION ─── */
+#experience { background: var(--white); }
+.exp-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+}
+.exp-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+}
+.exp-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), #6FA3FF);
+}
+.exp-card:hover {
+  box-shadow: 0 8px 32px rgba(26,86,219,0.08);
+  transform: translateY(-2px);
+  border-color: var(--accent-mid);
+}
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.exp-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.15rem;
+  color: var(--ink);
+  margin-bottom: 0.2rem;
+}
+.exp-company {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+.exp-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+.exp-date {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--tag-bg);
+  padding: 0.22rem 0.65rem;
+  border-radius: 99px;
+}
+.exp-location {
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+}
+.exp-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.exp-bullets li {
+  font-size: 0.88rem;
+  color: var(--ink-light);
+  line-height: 1.65;
+  display: flex;
+  gap: 0.6rem;
+}
+.exp-bullets li::before {
+  content: '→';
+  color: var(--accent);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+[data-lang] { display: block; }
