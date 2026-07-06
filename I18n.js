@@ -11,10 +11,8 @@ const translations = {
     "hero.tagline": "Estudiante de Informática apasionado por el desarrollo de software, soporte IT y reparación de hardware — construyendo habilidades, resolviendo problemas, listo para generar impacto desde el primer día.",
     "hero.cta1": "Ver Mi Trabajo",
     "hero.cta2": "Contáctame",
-    "hero.scroll": "Bajar",
     "about.label": "Sobre Mí",
     "about.roles": "Desarrollador · Técnico de Soporte IT<br>Técnico en Reparación de Hardware",
-    "about.sub": "Estudiante de Informática &nbsp;·&nbsp; Resolución de Problemas &nbsp;·&nbsp; Tech Enthusiast",
     "about.stat1": "En Progreso",
     "about.stat2": "Áreas de Carrera",
     "about.stat3": "Ganas de Aprender",
@@ -70,20 +68,16 @@ const translations = {
     "edu.label": "Educación",
     "edu.title": "Formación<br>Académica.",
     "edu.sub": "Formación formal que respalda cada habilidad técnica — desde algoritmos hasta hardware, desde código hasta redes.",
-    "edu.hs.badge": "Bachillerato Técnico",
     "edu.hs.title": "Bachiller Técnico en Equipos Electrónicos",
     "edu.hs.date": "Graduado: 2021",
     "edu.completed": "Completado",
-    "edu.hs.skills": "Habilidades Clave",
     "edu.hs.s1": "Circuitos analógicos y digitales",
     "edu.hs.s2": "Lectura de diagramas eléctricos",
     "edu.hs.s3": "Reemplazo de componentes",
     "edu.hs.s4": "Mantenimiento preventivo",
-    "edu.college.badge": "Universidad",
     "edu.college.title": "Licenciatura en Informática",
     "edu.college.date": "Inicio: 2021 — En Curso",
     "edu.inprogress": "En Progreso",
-    "edu.coursework": "Cursos Relevantes",
     "edu.c1": "Estructuras de Datos y Algoritmos",
     "edu.c2": "Sistemas Operativos",
     "edu.c3": "Redes de Computadoras",
@@ -134,10 +128,8 @@ const translations = {
     "hero.tagline": "CS student passionate about software development, IT support & hardware repair — building skills, solving problems, ready to make an impact from day one.",
     "hero.cta1": "View My Work",
     "hero.cta2": "Get in Touch",
-    "hero.scroll": "Scroll",
     "about.label": "About Me",
     "about.roles": "Developer · IT Support Technician<br>IT Repair Technician",
-    "about.sub": "CS Student &nbsp;·&nbsp; Problem Solver &nbsp;·&nbsp; Tech Enthusiast",
     "about.stat1": "Degree in Progress",
     "about.stat2": "Career Paths",
     "about.stat3": "Drive to Learn",
@@ -193,20 +185,16 @@ const translations = {
     "edu.label": "Education",
     "edu.title": "Academic<br>Foundation.",
     "edu.sub": "Formal training that underpins every technical skill — from algorithms to hardware, from code to networks.",
-    "edu.hs.badge": "Technical High School",
     "edu.hs.title": "Technical Diploma in Electronic Equipment",
     "edu.hs.date": "Graduated: 2021",
     "edu.completed": "Completed",
-    "edu.hs.skills": "Key Skills",
     "edu.hs.s1": "Analog & digital circuits",
     "edu.hs.s2": "Electrical diagram reading",
     "edu.hs.s3": "Component replacement",
     "edu.hs.s4": "Preventive maintenance",
-    "edu.college.badge": "University",
     "edu.college.title": "Bachelor of Science in Computer Science",
     "edu.college.date": "Started: 2021 — In Progress",
     "edu.inprogress": "In Progress",
-    "edu.coursework": "Relevant Coursework",
     "edu.c1": "Data Structures & Algorithms",
     "edu.c2": "Operating Systems",
     "edu.c3": "Computer Networks",
@@ -272,7 +260,7 @@ function toggleTheme() {
   const html = document.documentElement;
   const isDark = html.getAttribute('data-theme') === 'dark';
   html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-  document.getElementById('theme-icon').textContent = isDark ? '☀️' : '🌙';
+  document.getElementById('theme-icon').textContent = isDark ? '○' : '●';
 }
 
 // Auto-detect system preference on load
@@ -280,6 +268,6 @@ function toggleTheme() {
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.documentElement.setAttribute('data-theme', 'dark');
     const icon = document.getElementById('theme-icon');
-    if (icon) icon.textContent = '🌙';
+    if (icon) icon.textContent = '●';
   }
 })();

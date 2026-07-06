@@ -1,330 +1,281 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Juan Carlos Frias Alfonso — Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="stylesheet" href="theme.css"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Juan Carlos Frias Alfonso — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
-  <!-- ─── NAV ─── -->
-  <nav>
-    <a href="#hero" class="nav-logo">JC Frias</a>
-    <ul class="nav-links">
-      <li><a href="#about" data-i18n="nav.about">Sobre Mí</a></li>
-      <li><a href="#skills" data-i18n="nav.skills">Habilidades</a></li>
-      <li><a href="#experience" data-i18n="nav.experience">Experiencia</a></li>
-      <li><a href="#education" data-i18n="nav.education">Educación</a></li>
-      <li><a href="#certificates" data-i18n="nav.certs">Certificados</a></li>
-      <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Contacto</a></li>
-    </ul>
-    <div class="controls-bar">
-      <button class="ctrl-btn active" id="btn-es" onclick="setLang('es')">ES</button>
-      <div class="lang-divider"></div>
-      <button class="ctrl-btn" id="btn-en" onclick="setLang('en')">EN</button>
-      <div class="lang-divider"></div>
-      <button class="ctrl-btn" id="btn-theme" onclick="toggleTheme()" title="Toggle theme">
-        <span class="theme-icon" id="theme-icon">☀️</span>
-      </button>
-    </div>
-  </nav>
+<!-- ─── CIRCUIT RAIL (signature element) ─── -->
+<div class="rail" aria-hidden="true">
+  <div class="rail-line"></div>
+  <div class="rail-node" data-target="hero"><span>00</span></div>
+  <div class="rail-node" data-target="about"><span>01</span></div>
+  <div class="rail-node" data-target="skills"><span>02</span></div>
+  <div class="rail-node" data-target="experience"><span>03</span></div>
+  <div class="rail-node" data-target="education"><span>04</span></div>
+  <div class="rail-node" data-target="certificates"><span>05</span></div>
+  <div class="rail-node" data-target="projects"><span>06</span></div>
+  <div class="rail-node" data-target="contact"><span>07</span></div>
+</div>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <a href="#hero" class="nav-logo">JCFA</a>
+  <ul class="nav-links">
+    <li><a href="#about" data-i18n="nav.about">Sobre Mí</a></li>
+    <li><a href="#skills" data-i18n="nav.skills">Habilidades</a></li>
+    <li><a href="#experience" data-i18n="nav.experience">Experiencia</a></li>
+    <li><a href="#education" data-i18n="nav.education">Educación</a></li>
+    <li><a href="#certificates" data-i18n="nav.certs">Certificados</a></li>
+    <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Contacto</a></li>
+  </ul>
+  <div class="controls-bar">
+    <button class="ctrl-btn active" id="btn-es" onclick="setLang('es')">ES</button>
+    <span class="lang-divider"></span>
+    <button class="ctrl-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    <span class="lang-divider"></span>
+    <button class="ctrl-btn ctrl-theme" id="btn-theme" onclick="toggleTheme()" title="Toggle theme">
+      <span id="theme-icon">○</span>
+    </button>
+  </div>
+</nav>
+
+<main>
 
   <!-- ─── HERO ─── -->
-  <section id="hero">
-    <div class="hero-grid-bg"></div>
-    <div class="hero-accent-blob"></div>
-    <div class="hero-content">
-      <h1 class="hero-name">Juan Carlos<br><em>Frias Alfonso</em></h1>
-      <p class="hero-tagline" data-i18n="hero.tagline">
-        Estudiante de Informática apasionado por el desarrollo de software, soporte IT y reparación de hardware —
-        construyendo habilidades, y resolviendo problemas.
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn-primary">
-          <span data-i18n="hero.cta1">Ver Mi Trabajo</span>
-          <span>↓</span>
-        </a>
-        <a href="#contact" class="btn-secondary">
-          <span data-i18n="hero.cta2">Contáctame</span>
-        </a>
-      </div>
+  <section id="hero" class="section-hero">
+    <div class="hero-meta reveal">
+      <span class="hero-index">00</span>
+      <span class="hero-status"><i class="dot"></i><span data-i18n="hero.badge">Disponible para oportunidades</span></span>
     </div>
-    <a href="#about" class="hero-scroll">
-      <span class="scroll-line"></span>
-      <span data-i18n="hero.scroll">Bajar</span>
-    </a>
+    <h1 class="hero-name reveal">Juan Carlos<br>Frias Alfonso</h1>
+    <p class="hero-role reveal" data-i18n="about.roles">Desarrollador · Técnico de Soporte IT<br>Técnico en Reparación de Hardware</p>
+    <p class="hero-tagline reveal" data-i18n="hero.tagline">Estudiante de Informática apasionado por el desarrollo de software, soporte IT y reparación de hardware.</p>
+    <div class="hero-actions reveal">
+      <a href="#projects" class="link-arrow"><span data-i18n="hero.cta1">Ver Mi Trabajo</span> <i>→</i></a>
+      <a href="#contact" class="link-arrow"><span data-i18n="hero.cta2">Contáctame</span> <i>→</i></a>
+    </div>
   </section>
 
   <!-- ─── ABOUT ─── -->
   <section id="about">
-    <div class="section-label" data-i18n="about.label">Sobre Mí</div>
-    <div class="about-layout">
-      <div class="about-visual reveal">
-        <div class="about-photo-wrapper">
-          <div class="about-photo-placeholder">
-            <img src="img/me.jpg" alt="Juan Carlos Frias Alfonso" class="about-photo" />
-          </div>
+    <div class="section-head reveal">
+      <span class="section-index">01</span>
+      <span class="section-label" data-i18n="about.label">Sobre Mí</span>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-side reveal">
+        <div class="about-photo-frame">
+          <img src="img/me.jpg" alt="Juan Carlos Frias Alfonso" class="about-photo" />
         </div>
-        <div class="about-card">
-          <div class="about-card-name">Juan Carlos Frias Alfonso</div>
-          <div class="about-card-role" data-i18n="about.roles">
-            Desarrollador · Técnico de Soporte IT<br>Técnico en Reparación de Hardware
-          </div>
-          <div class="about-card-sub" data-i18n="about.sub">
-            Estudiante de Informática &nbsp;·&nbsp; Resolución de Problemas &nbsp;·&nbsp; Tech Enthusiast
-          </div>
-          <div class="about-stat-row">
-            <div class="about-stat">
-              <div class="about-stat-num">CS</div>
-              <div class="about-stat-label" data-i18n="about.stat1">En Progreso</div>
-            </div>
-            <div class="about-stat">
-              <div class="about-stat-num">3</div>
-              <div class="about-stat-label" data-i18n="about.stat2">Áreas de Carrera</div>
-            </div>
-            <div class="about-stat">
-              <div class="about-stat-num">&#x221E;</div>
-              <div class="about-stat-label" data-i18n="about.stat3">Ganas de Aprender</div>
-            </div>
-            <div class="about-stat">
-              <div class="about-stat-num">&#x2713;</div>
-              <div class="about-stat-label" data-i18n="about.stat4">Disponible</div>
-            </div>
-          </div>
-        </div>
+        <dl class="about-stats">
+          <div><dt data-i18n="about.stat1">En Progreso</dt><dd>CS</dd></div>
+          <div><dt data-i18n="about.stat2">Áreas de Carrera</dt><dd>3</dd></div>
+          <div><dt data-i18n="about.stat3">Ganas de Aprender</dt><dd>∞</dd></div>
+          <div><dt data-i18n="about.stat4">Disponible</dt><dd>✓</dd></div>
+        </dl>
       </div>
 
-      <div class="about-text reveal">
-        <div class="section-title" data-i18n="about.title">Impulsado por la curiosidad,<br>fundamentado en lo esencial.</div>
-        <p data-i18n="about.p1">
-          Soy Juan Carlos, un estudiante de Informática con un enfoque multi-área claro: construir
-          software como desarrollador, apoyar usuarios como técnico de helpdesk IT, y diagnosticar
-          y reparar hardware como técnico en reparación.
-        </p>
-        <p data-i18n="about.p2">
-          Durante mis años académicos he afilado mis conocimientos técnicos — desde fundamentos de
-          programación y redes hasta diagnóstico y reparación de hardware a nivel de componentes,
-          y administración de sistemas.
-        </p>
-
+      <div class="about-main reveal">
+        <h2 class="section-title" data-i18n="about.title">Impulsado por la curiosidad,<br>fundamentado en lo esencial.</h2>
+        <p data-i18n="about.p1">Soy Juan Carlos, un estudiante de Informática con un enfoque multi-área claro.</p>
+        <p data-i18n="about.p2">Durante mis años académicos he afilado mis conocimientos técnicos.</p>
+        <p data-i18n="about.p3">Busco activamente roles de nivel inicial, pasantías u oportunidades freelance.</p>
       </div>
     </div>
   </section>
 
   <!-- ─── SKILLS ─── -->
   <section id="skills">
-    <div class="skills-intro reveal">
-      <div>
-        <div class="section-label" data-i18n="skills.label">Habilidades y Herramientas</div>
-        <div class="section-title" data-i18n="skills.title">Lo que traigo<br>a la mesa.</div>
+    <div class="section-head reveal">
+      <span class="section-index">02</span>
+      <span class="section-label" data-i18n="skills.label">Habilidades y Herramientas</span>
+    </div>
+    <h2 class="section-title reveal" data-i18n="skills.title">Lo que traigo<br>a la mesa.</h2>
+    <p class="section-sub reveal" data-i18n="skills.sub">Un toolkit creciente en desarrollo, soporte IT y reparación de hardware.</p>
+
+    <div class="skill-list">
+      <div class="skill-row reveal">
+        <div class="skill-row-head">
+          <span class="skill-num">01</span>
+          <h3 data-i18n="skills.card1.title">Programación y Desarrollo</h3>
+        </div>
+        <p data-i18n="skills.card1.desc">Cómodo con lenguajes principales y conceptos fundamentales de programación.</p>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Java</span><span class="tag">C / C++</span>
+          <span class="tag">HTML &amp; CSS</span><span class="tag">JavaScript</span><span class="tag">Git &amp; GitHub</span>
+        </div>
       </div>
-      
+
+      <div class="skill-row reveal">
+        <div class="skill-row-head">
+          <span class="skill-num">02</span>
+          <h3 data-i18n="skills.card2.title">Soporte IT y Help Desk</h3>
+        </div>
+        <p data-i18n="skills.card2.desc">Conocimiento en flujos de diagnóstico y soporte técnico hardware/software.</p>
+        <div class="tag-row">
+          <span class="tag" data-i18n="tag.troubleshooting">Diagnóstico</span>
+          <span class="tag" data-i18n="tag.helpdesk">Help Desk</span>
+          <span class="tag" data-i18n="tag.remote">Soporte Remoto</span>
+          <span class="tag" data-i18n="tag.ticketing">Sistemas de Tickets</span>
+          <span class="tag" data-i18n="tag.communication">Comunicación</span>
+        </div>
+      </div>
+
+      <div class="skill-row reveal">
+        <div class="skill-row-head">
+          <span class="skill-num">03</span>
+          <h3 data-i18n="skills.card3.title">Reparación IT y Hardware</h3>
+        </div>
+        <p data-i18n="skills.card3.desc">Conocimiento práctico de hardware de PC y diagnóstico de componentes.</p>
+        <div class="tag-row">
+          <span class="tag" data-i18n="tag.pcassembly">Ensamblaje PC</span>
+          <span class="tag" data-i18n="tag.diagnosis">Diagnóstico</span>
+          <span class="tag" data-i18n="tag.laptoprepair">Reparación Laptop</span>
+          <span class="tag" data-i18n="tag.osinstall">Reinstalación OS</span>
+          <span class="tag">BIOS / UEFI</span>
+          <span class="tag" data-i18n="tag.circuits">Circuitos Analógicos/Digitales</span>
+        </div>
+      </div>
+
+      <div class="skill-row reveal">
+        <div class="skill-row-head">
+          <span class="skill-num">04</span>
+          <h3 data-i18n="skills.card4.title">Redes y Sistemas</h3>
+        </div>
+        <p data-i18n="skills.card4.desc">Comprensión de principios de redes y administración de sistemas operativos.</p>
+        <div class="tag-row">
+          <span class="tag">TCP/IP</span><span class="tag">DNS / DHCP</span><span class="tag">Windows OS</span>
+          <span class="tag">Linux Basics</span><span class="tag">VPNs &amp; Firewalls</span>
+        </div>
+      </div>
+
+      <div class="skill-row reveal">
+        <div class="skill-row-head">
+          <span class="skill-num">05</span>
+          <h3 data-i18n="skills.card5.title">Bases de Datos</h3>
+        </div>
+        <p data-i18n="skills.card5.desc">Familiarizado con diseño de bases de datos relacionales y consultas.</p>
+        <div class="tag-row">
+          <span class="tag">SQL</span><span class="tag">MySQL</span>
+          <span class="tag" data-i18n="tag.dbdesign">Diseño de BD</span>
+          <span class="tag" data-i18n="tag.datamodeling">Modelado de Datos</span>
+        </div>
+      </div>
+
+      <div class="skill-row reveal">
+        <div class="skill-row-head">
+          <span class="skill-num">06</span>
+          <h3 data-i18n="skills.card6.title">Habilidades Blandas</h3>
+        </div>
+        <p data-i18n="skills.card6.desc">Comunicación clara y mentalidad orientada a soluciones.</p>
+        <div class="tag-row">
+          <span class="tag" data-i18n="tag.comm">Comunicación</span>
+          <span class="tag" data-i18n="tag.problemsolving">Resolución de Problemas</span>
+          <span class="tag" data-i18n="tag.fastlearner">Aprendizaje Rápido</span>
+          <span class="tag" data-i18n="tag.teamplayer">Trabajo en Equipo</span>
+          <span class="tag" data-i18n="tag.bilingual">Bilingüe (ES/EN)</span>
+        </div>
+      </div>
     </div>
 
-    <div class="skills-grid">
-      <div class="skill-card reveal">
-        <div class="skill-card-icon" style="background:#EBF0FD;">💻</div>
-        <div class="skill-card-title" data-i18n="skills.card1.title">Programación y Desarrollo</div>
-        <div class="skill-card-desc" data-i18n="skills.card1.desc">Cómodo con lenguajes principales y conceptos fundamentales de programación a través de cursos CS y proyectos personales.</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">Java</span>
-          <span class="skill-tag">C / C++</span>
-          <span class="skill-tag">HTML &amp; CSS</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">Git &amp; GitHub</span>
-        </div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-card-icon" style="background:#F0FDF4;">🛠️</div>
-        <div class="skill-card-title" data-i18n="skills.card2.title">Soporte IT y Help Desk</div>
-        <div class="skill-card-desc" data-i18n="skills.card2.desc">Conocimiento en flujos de diagnóstico, soporte técnico hardware/software y mejores prácticas de atención al usuario.</div>
-        <div class="skill-tags">
-          <span class="skill-tag" data-i18n="tag.troubleshooting">Diagnóstico</span>
-          <span class="skill-tag" data-i18n="tag.helpdesk">Help Desk</span>
-          <span class="skill-tag" data-i18n="tag.remote">Soporte Remoto</span>
-          <span class="skill-tag" data-i18n="tag.ticketing">Sistemas de Tickets</span>
-          <span class="skill-tag" data-i18n="tag.communication">Comunicación</span>
-        </div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-card-icon" style="background:#FFF7ED;">🔧</div>
-        <div class="skill-card-title" data-i18n="skills.card3.title">Reparación IT y Hardware</div>
-        <div class="skill-card-desc" data-i18n="skills.card3.desc">Conocimiento práctico de hardware de PC, diagnóstico de componentes electrónicos, procedimientos de reparación y mantenimiento preventivo.</div>
-        <div class="skill-tags">
-          <span class="skill-tag" data-i18n="tag.pcassembly">Ensamblaje PC</span>
-          <span class="skill-tag" data-i18n="tag.diagnosis">Diagnóstico</span>
-          <span class="skill-tag" data-i18n="tag.laptoprepair">Reparación Laptop</span>
-          <span class="skill-tag" data-i18n="tag.osinstall">Reinstalación OS</span>
-          <span class="skill-tag">BIOS / UEFI</span>
-          <span class="skill-tag" data-i18n="tag.circuits">Circuitos Analógicos/Digitales</span>
-        </div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-card-icon" style="background:#F5F0FF;">🌐</div>
-        <div class="skill-card-title" data-i18n="skills.card4.title">Redes y Sistemas</div>
-        <div class="skill-card-desc" data-i18n="skills.card4.desc">Comprensión de principios de redes y administración de sistemas operativos, aplicados en laboratorios y proyectos académicos.</div>
-        <div class="skill-tags">
-          <span class="skill-tag">TCP/IP</span>
-          <span class="skill-tag">DNS / DHCP</span>
-          <span class="skill-tag">Windows OS</span>
-          <span class="skill-tag">Linux Basics</span>
-          <span class="skill-tag">VPNs &amp; Firewalls</span>
-        </div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-card-icon" style="background:#FDF4FF;">🗄️</div>
-        <div class="skill-card-title" data-i18n="skills.card5.title">Bases de Datos</div>
-        <div class="skill-card-desc" data-i18n="skills.card5.desc">Familiarizado con diseño de bases de datos relacionales y consultas, con experiencia en cursos académicos.</div>
-        <div class="skill-tags">
-          <span class="skill-tag">SQL</span>
-          <span class="skill-tag">MySQL</span>
-          <span class="skill-tag" data-i18n="tag.dbdesign">Diseño de BD</span>
-          <span class="skill-tag" data-i18n="tag.datamodeling">Modelado de Datos</span>
-        </div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-card-icon" style="background:#FFF1F2;">🤝</div>
-        <div class="skill-card-title" data-i18n="skills.card6.title">Habilidades Blandas</div>
-        <div class="skill-card-desc" data-i18n="skills.card6.desc">Comunicación clara y mentalidad orientada a soluciones — parte de lo que traigo cada día.</div>
-        <div class="skill-tags">
-          <span class="skill-tag" data-i18n="tag.comm">Comunicación</span>
-          <span class="skill-tag" data-i18n="tag.problemsolving">Resolución de Problemas</span>
-          <span class="skill-tag" data-i18n="tag.fastlearner">Aprendizaje Rápido</span>
-          <span class="skill-tag" data-i18n="tag.teamplayer">Trabajo en Equipo</span>
-          <span class="skill-tag" data-i18n="tag.bilingual">Bilingüe (ES/EN)</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="learning-section reveal">
-      <div class="learning-title" data-i18n="skills.learning">Aprendiendo y explorando actualmente</div>
-      <div class="learning-chips">
-        <span class="learning-chip">React.js</span>
-        <span class="learning-chip">CompTIA A+ Prep</span>
-        <span class="learning-chip">Cloud Basics (AWS)</span>
-        <span class="learning-chip">Node.js</span>
-        <span class="learning-chip">Docker</span>
-        <span class="learning-chip">ITIL Concepts</span>
-      </div>
+    <div class="learning-line reveal">
+      <span class="learning-label" data-i18n="skills.learning">Aprendiendo y explorando actualmente</span>
+      <span class="learning-items">React.js · CompTIA A+ Prep · Cloud Basics (AWS) · Node.js · Docker · ITIL Concepts</span>
     </div>
   </section>
 
   <!-- ─── EXPERIENCE ─── -->
   <section id="experience">
-    <div class="section-label" data-i18n="exp.label">Experiencia Profesional</div>
-    <div class="education-header reveal">
-      <div class="section-title" data-i18n="exp.title">Experiencia<br>Laboral.</div>
-      <p class="section-sub" data-i18n="exp.sub">Experiencia en entornos de trabajo reales, desarrollando habilidades de comunicación, orientación a resultados y trabajo bajo presión.</p>
+    <div class="section-head reveal">
+      <span class="section-index">03</span>
+      <span class="section-label" data-i18n="exp.label">Experiencia Profesional</span>
     </div>
-    <div class="exp-timeline">
-      <div class="exp-card reveal">
-        <div class="exp-header">
-          <div>
-            <div class="exp-title" data-i18n="exp.job1.title">Representante de Servicio al Cliente</div>
-            <div class="exp-company">TelePerformance</div>
-          </div>
-          <div class="exp-meta">
-            <span class="exp-date">05/2022 – 09/2022</span>
-            <span class="exp-location">Santo Domingo, RD</span>
-          </div>
+    <h2 class="section-title reveal" data-i18n="exp.title">Experiencia<br>Laboral.</h2>
+    <p class="section-sub reveal" data-i18n="exp.sub">Experiencia en entornos de trabajo reales.</p>
+
+    <div class="entry-list">
+      <div class="entry-row reveal">
+        <div class="entry-when">
+          <span>05/2022 – 09/2022</span>
+          <span class="entry-place">Santo Domingo, RD</span>
         </div>
-        <ul class="exp-bullets">
-          <li data-i18n="exp.job1.b1">Cumplimiento de Métricas (KPIs): Orientación a resultados con objetivos de calidad, tiempo de manejo de llamada (AHT) y satisfacción del cliente (CSAT).</li>
-          <li data-i18n="exp.job1.b2">Comunicación Efectiva: Habilidad para explicar conceptos complejos de manera sencilla, adaptando el lenguaje según el perfil del usuario.</li>
-        </ul>
+        <div class="entry-body">
+          <h3 data-i18n="exp.job1.title">Representante de Servicio al Cliente</h3>
+          <p class="entry-org">TelePerformance</p>
+          <ul>
+            <li data-i18n="exp.job1.b1">Cumplimiento de Métricas (KPIs).</li>
+            <li data-i18n="exp.job1.b2">Comunicación Efectiva.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ─── EDUCATION ─── -->
   <section id="education">
-    <div class="section-label" data-i18n="edu.label">Educación</div>
-    <div class="education-header reveal">
-      <div class="section-title" data-i18n="edu.title">Formación<br>Académica.</div>
-      <p class="section-sub" data-i18n="edu.sub">Formación formal que respalda cada habilidad técnica — desde algoritmos hasta hardware, desde código hasta redes.</p>
+    <div class="section-head reveal">
+      <span class="section-index">04</span>
+      <span class="section-label" data-i18n="edu.label">Educación</span>
     </div>
+    <h2 class="section-title reveal" data-i18n="edu.title">Formación<br>Académica.</h2>
+    <p class="section-sub reveal" data-i18n="edu.sub">Formación formal que respalda cada habilidad técnica.</p>
 
-    <div class="education-layout">
-      <div class="edu-main">
-        <div class="edu-level-card reveal">
-          <div class="edu-level-badge edu-hs-badge" data-i18n="edu.hs.badge">Bachillerato Técnico</div>
-          <div class="edu-degree-card">
-            <div class="edu-degree-icon"><img src="img/itao-removebg-preview.png" alt="ITAO" height="55"></div>
-            <div class="edu-degree-info">
-              <div class="edu-degree-title" data-i18n="edu.hs.title">Bachiller Técnico en Equipos Electrónicos</div>
-              <div class="edu-degree-school">Instituto Tecnológico de Artes y Oficios</div>
-              <div class="edu-degree-meta">
-                <span class="edu-meta-item">📅 <span data-i18n="edu.hs.date">Graduado: 2021</span></span>
-                <span class="edu-meta-item">📍 Santo Domingo, RD</span>
-                <span class="edu-status edu-status-done" data-i18n="edu.completed">Completado</span>
-              </div>
-            </div>
-          </div>
-          <div class="edu-coursework">
-            <div class="edu-coursework-title" data-i18n="edu.hs.skills">Habilidades Clave</div>
-            <div class="edu-course-grid">
-              <div class="edu-course-item"><span class="edu-course-icon">⚡</span><span data-i18n="edu.hs.s1">Circuitos analógicos y digitales</span></div>
-              <div class="edu-course-item"><span class="edu-course-icon">📋</span><span data-i18n="edu.hs.s2">Lectura de diagramas eléctricos</span></div>
-              <div class="edu-course-item"><span class="edu-course-icon">🔩</span><span data-i18n="edu.hs.s3">Reemplazo de componentes</span></div>
-              <div class="edu-course-item"><span class="edu-course-icon">🛡️</span><span data-i18n="edu.hs.s4">Mantenimiento preventivo</span></div>
-            </div>
-          </div>
+    <div class="entry-list">
+      <div class="entry-row reveal">
+        <div class="entry-when">
+          <span data-i18n="edu.hs.date">Graduado: 2021</span>
+          <span class="entry-place">Santo Domingo, RD</span>
+          <span class="status-tag status-done" data-i18n="edu.completed">Completado</span>
         </div>
-
-        <div class="edu-level-card reveal">
-          <div class="edu-level-badge edu-college-badge" data-i18n="edu.college.badge">Universidad</div>
-          <div class="edu-degree-card">
-            <div class="edu-degree-icon"><img src="img/uasd-removebg-preview.png" height="55"></div>
-            <div class="edu-degree-info">
-              <div class="edu-degree-title" data-i18n="edu.college.title">Licenciatura en Informática</div>
-              <div class="edu-degree-school">Universidad Autónoma de Santo Domingo</div>
-              <div class="edu-degree-meta">
-                <span class="edu-meta-item">📅 <span data-i18n="edu.college.date">Inicio: 2021 — En Curso</span></span>
-                <span class="edu-meta-item">📍 Santo Domingo, RD</span>
-                <span class="edu-status" data-i18n="edu.inprogress">En Progreso</span>
-              </div>
-            </div>
-          </div>
-          <div class="edu-coursework">
-            <div class="edu-coursework-title" data-i18n="edu.coursework">Cursos Relevantes</div>
-            <div class="edu-course-grid">
-              <div class="edu-course-item"><span class="edu-course-icon">💡</span><span data-i18n="edu.c1">Estructuras de Datos y Algoritmos</span></div>
-              <div class="edu-course-item"><span class="edu-course-icon">🖥️</span><span data-i18n="edu.c2">Sistemas Operativos</span></div>
-              <div class="edu-course-item"><span class="edu-course-icon">🌐</span><span data-i18n="edu.c3">Redes de Computadoras</span></div>
-              <div class="edu-course-item"><span class="edu-course-icon">🗄️</span><span data-i18n="edu.c4">Sistemas de Bases de Datos</span></div>
-              <div class="edu-course-item"><span class="edu-course-icon">🔒</span><span data-i18n="edu.c5">Seguridad de la Información</span></div>
-              <div class="edu-course-item"><span class="edu-course-icon">⚙️</span><span data-i18n="edu.c6">Ingeniería de Software</span></div>
-              <div class="edu-course-item"><span class="edu-course-icon">🔢</span><span data-i18n="edu.c7">Matemáticas Discretas</span></div>
-              <div class="edu-course-item"><span class="edu-course-icon">🧠</span><span data-i18n="edu.c8">Programación Orientada a Objetos</span></div>
-            </div>
+        <div class="entry-body">
+          <h3 data-i18n="edu.hs.title">Bachiller Técnico en Equipos Electrónicos</h3>
+          <p class="entry-org">Instituto Tecnológico de Artes y Oficios</p>
+          <div class="course-line">
+            <span data-i18n="edu.hs.s1">Circuitos analógicos y digitales</span>
+            <span data-i18n="edu.hs.s2">Lectura de diagramas eléctricos</span>
+            <span data-i18n="edu.hs.s3">Reemplazo de componentes</span>
+            <span data-i18n="edu.hs.s4">Mantenimiento preventivo</span>
           </div>
         </div>
       </div>
 
-      <div class="edu-side">
-        <div class="edu-card reveal">
-          <div class="edu-card-header">
-            <span class="edu-card-icon">🌍</span>
-            <span class="edu-card-heading" data-i18n="edu.languages">Idiomas</span>
+      <div class="entry-row reveal">
+        <div class="entry-when">
+          <span data-i18n="edu.college.date">Inicio: 2021 — En Curso</span>
+          <span class="entry-place">Santo Domingo, RD</span>
+          <span class="status-tag" data-i18n="edu.inprogress">En Progreso</span>
+        </div>
+        <div class="entry-body">
+          <h3 data-i18n="edu.college.title">Licenciatura en Informática</h3>
+          <p class="entry-org">Universidad Autónoma de Santo Domingo</p>
+          <div class="course-line">
+            <span data-i18n="edu.c1">Estructuras de Datos y Algoritmos</span>
+            <span data-i18n="edu.c2">Sistemas Operativos</span>
+            <span data-i18n="edu.c3">Redes de Computadoras</span>
+            <span data-i18n="edu.c4">Sistemas de Bases de Datos</span>
+            <span data-i18n="edu.c5">Seguridad de la Información</span>
+            <span data-i18n="edu.c6">Ingeniería de Software</span>
+            <span data-i18n="edu.c7">Matemáticas Discretas</span>
+            <span data-i18n="edu.c8">Programación Orientada a Objetos</span>
           </div>
-          <div class="edu-lang-list">
-            <div class="edu-lang-item">
-              <span class="edu-lang-name" data-i18n="edu.spanish">Español</span>
-              <span class="edu-lang-level" data-i18n="edu.native">Nativo</span>
-            </div>
-            <div class="edu-lang-item">
-              <span class="edu-lang-name" data-i18n="edu.english">Inglés</span>
-              <span class="edu-lang-level" data-i18n="edu.c2">C2 Avanzado</span>
-            </div>
+        </div>
+      </div>
+
+      <div class="entry-row reveal">
+        <div class="entry-when">
+          <span data-i18n="edu.languages">Idiomas</span>
+        </div>
+        <div class="entry-body">
+          <div class="lang-line">
+            <span><b data-i18n="edu.spanish">Español</b> — <span data-i18n="edu.native">Nativo</span></span>
+            <span><b data-i18n="edu.english">Inglés</b> — <span data-i18n="edu.advlevel">C2 Avanzado</span></span>
           </div>
         </div>
       </div>
@@ -333,102 +284,99 @@
 
   <!-- ─── CERTIFICATES ─── -->
   <section id="certificates">
-    <div class="section-label" data-i18n="certs.label">Certificados</div>
-    <div class="cert-header reveal">
-      <div class="section-title" data-i18n="certs.title">Credenciales y<br>Formación.</div>
-      <p class="section-sub" data-i18n="certs.sub">Certificaciones obtenidas y en curso para validar conocimientos técnicos y preparación profesional.</p>
+    <div class="section-head reveal">
+      <span class="section-index">05</span>
+      <span class="section-label" data-i18n="certs.label">Certificados</span>
     </div>
+    <h2 class="section-title reveal" data-i18n="certs.title">Credenciales y<br>Formación.</h2>
+    <p class="section-sub reveal" data-i18n="certs.sub">Certificaciones obtenidas y en curso.</p>
 
-    <div class="cert-grid">
-      <div class="cert-card reveal">
-        <div class="cert-card-top">
-          <div class="cert-logo"><img src="img/excel.png" height="35" alt="Excel"></div>
-          <span class="cert-status-badge cert-completed" data-i18n="cert.completed">Completado</span>
+    <div class="entry-list">
+      <div class="entry-row reveal">
+        <div class="entry-when">
+          <span>Coursera</span>
+          <span class="status-tag status-done" data-i18n="cert.completed">Completado</span>
         </div>
-        <div class="cert-card-title" data-i18n="cert.excel.title">Microsoft Excel Fundamentals</div>
-        <div class="cert-card-issuer">Coursera</div>
-        <div class="cert-card-desc" data-i18n="cert.excel.desc">Certificación en Microsoft Excel — hojas de cálculo, fórmulas y análisis de datos.</div>
-        <div class="cert-card-footer">
-          <span class="cert-tag">Excel</span>
-          <span class="cert-tag" data-i18n="tag.dataanalysis">Análisis de Datos</span>
-          <span class="cert-tag" data-i18n="tag.productivity">Productividad</span>
+        <div class="entry-body">
+          <h3 data-i18n="cert.excel.title">Microsoft Excel Fundamentals</h3>
+          <p data-i18n="cert.excel.desc">Certificación en Microsoft Excel.</p>
+          <div class="tag-row">
+            <span class="tag">Excel</span>
+            <span class="tag" data-i18n="tag.dataanalysis">Análisis de Datos</span>
+            <span class="tag" data-i18n="tag.productivity">Productividad</span>
+          </div>
         </div>
       </div>
 
-      <div class="cert-card reveal">
-        <div class="cert-card-top">
-<<<<<<< HEAD
-          <div class="cert-logo" style="background:#F0FDF4; font-size:1.5rem; display:flex; align-items:center; justify-content:center;">💻</div>
-          <span class="cert-status-badge cert-completed" data-i18n="cert.completed">Completado</span>
-=======
-          <div class="cert-logo" style="background:#F0FDF4;">&#x1F4BB;</div>
-          <span class="cert-status-badge cert-completed">Complete</span>
->>>>>>> bc8b0d167e31a23cffbcf1a5e8c1ec856b571c10
+      <div class="entry-row reveal">
+        <div class="entry-when">
+          <span>Google / Coursera</span>
+          <span class="status-tag status-done" data-i18n="cert.completed">Completado</span>
         </div>
-        <div class="cert-card-title">Google IT Support Certificate</div>
-        <div class="cert-card-issuer">Google / Coursera</div>
-        <div class="cert-card-desc" data-i18n="cert.google.desc">Certificado profesional que cubre fundamentos de soporte técnico, administración de sistemas, redes y seguridad IT.</div>
-        <div class="cert-card-footer">
-          <span class="cert-tag">IT Support</span>
-          <span class="cert-tag">Sysadmin</span>
-          <span class="cert-tag" data-i18n="tag.security">Seguridad</span>
+        <div class="entry-body">
+          <h3>Google IT Support Certificate</h3>
+          <p data-i18n="cert.google.desc">Certificado profesional que cubre fundamentos de soporte técnico.</p>
+          <div class="tag-row">
+            <span class="tag">IT Support</span><span class="tag">Sysadmin</span>
+            <span class="tag" data-i18n="tag.security">Seguridad</span>
+          </div>
         </div>
       </div>
 
-      <div class="cert-card reveal">
-        <div class="cert-card-top">
-          <div class="cert-logo" style="background:#FFF7ED; font-size:1.5rem; display:flex; align-items:center; justify-content:center;">🎓</div>
-          <span class="cert-status-badge cert-completed" data-i18n="cert.completed">Completado</span>
+      <div class="entry-row reveal">
+        <div class="entry-when">
+          <span>Harvard University / edX</span>
+          <span class="status-tag status-done" data-i18n="cert.completed">Completado</span>
         </div>
-        <div class="cert-card-title">CS50x: Intro to Computer Science</div>
-        <div class="cert-card-issuer">Harvard University / edX</div>
-        <div class="cert-card-desc" data-i18n="cert.cs50.desc">El reconocido curso introductorio de CS de Harvard — C, Python, SQL, algoritmos, estructuras de datos y desarrollo web.</div>
-        <div class="cert-card-footer">
-          <span class="cert-tag">Python</span>
-          <span class="cert-tag">C</span>
-          <span class="cert-tag" data-i18n="tag.algorithms">Algoritmos</span>
-        </div>
-      </div>
-
-      <div class="cert-card reveal">
-        <div class="cert-card-top">
-          <div class="cert-logo" style="background:#FFF7ED; font-size:1.5rem; display:flex; align-items:center; justify-content:center;">🐍</div>
-          <span class="cert-status-badge cert-pursuing" data-i18n="cert.pursuing">En Curso</span>
-        </div>
-        <div class="cert-card-title">Python Programming</div>
-        <div class="cert-card-issuer">FreeCodeCamp</div>
-        <div class="cert-card-desc" data-i18n="cert.python.desc">Fundamentos de programación en Python y sus aplicaciones.</div>
-        <div class="cert-card-footer">
-          <span class="cert-tag">Python</span>
-          <span class="cert-tag" data-i18n="tag.dataanalysis">Análisis de Datos</span>
+        <div class="entry-body">
+          <h3>CS50x: Intro to Computer Science</h3>
+          <p data-i18n="cert.cs50.desc">El reconocido curso introductorio de CS de Harvard.</p>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">C</span>
+            <span class="tag" data-i18n="tag.algorithms">Algoritmos</span>
+          </div>
         </div>
       </div>
 
-      <div class="cert-card reveal">
-        <div class="cert-card-top">
-          <div class="cert-logo" style="background:#EBF0FD; font-size:1.5rem; display:flex; align-items:center; justify-content:center;">☕</div>
-          <span class="cert-status-badge cert-completed" data-i18n="cert.completed">Completado</span>
+      <div class="entry-row reveal">
+        <div class="entry-when">
+          <span>FreeCodeCamp</span>
+          <span class="status-tag" data-i18n="cert.pursuing">En Curso</span>
         </div>
-        <div class="cert-card-title">Java Programming</div>
-        <div class="cert-card-issuer">FreeCodeCamp</div>
-        <div class="cert-card-desc" data-i18n="cert.java.desc">Programación en Java — POO, estructuras de datos y desarrollo de aplicaciones.</div>
-        <div class="cert-card-footer">
-          <span class="cert-tag">Java</span>
-          <span class="cert-tag">OOP</span>
+        <div class="entry-body">
+          <h3>Python Programming</h3>
+          <p data-i18n="cert.python.desc">Fundamentos de programación en Python y sus aplicaciones.</p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag" data-i18n="tag.dataanalysis">Análisis de Datos</span>
+          </div>
         </div>
       </div>
 
-      <div class="cert-card cert-placeholder reveal">
-        <div class="cert-card-top">
-          <div class="cert-logo" style="background:#F4F4F0; font-size:1.5rem; display:flex; align-items:center; justify-content:center;">➕</div>
+      <div class="entry-row reveal">
+        <div class="entry-when">
+          <span>FreeCodeCamp</span>
+          <span class="status-tag status-done" data-i18n="cert.completed">Completado</span>
         </div>
-        <div class="cert-card-title cert-coming" data-i18n="cert.more.title">Más Próximamente</div>
-        <div class="cert-card-issuer" data-i18n="cert.more.issuer">Aprendiendo activamente</div>
-        <div class="cert-card-desc" data-i18n="cert.more.desc">Expansión continua de credenciales — próximos objetivos: CompTIA Network+, AWS Cloud Practitioner y más.</div>
-        <div class="cert-card-footer">
-          <span class="cert-tag">Network+</span>
-          <span class="cert-tag">AWS</span>
-          <span class="cert-tag">ITIL</span>
+        <div class="entry-body">
+          <h3>Java Programming</h3>
+          <p data-i18n="cert.java.desc">Programación en Java — POO, estructuras de datos.</p>
+          <div class="tag-row">
+            <span class="tag">Java</span><span class="tag">OOP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry-row entry-muted reveal">
+        <div class="entry-when">
+          <span data-i18n="cert.more.issuer">Aprendiendo activamente</span>
+        </div>
+        <div class="entry-body">
+          <h3 data-i18n="cert.more.title">Más Próximamente</h3>
+          <p data-i18n="cert.more.desc">Expansión continua de credenciales.</p>
+          <div class="tag-row">
+            <span class="tag">Network+</span><span class="tag">AWS</span><span class="tag">ITIL</span>
+          </div>
         </div>
       </div>
     </div>
@@ -436,74 +384,104 @@
 
   <!-- ─── PROJECTS ─── -->
   <section id="projects">
-    <div class="section-label" data-i18n="proj.label">Proyectos</div>
-    <div class="projects-header reveal">
-      <div class="section-title" data-i18n="proj.title">Lo que He<br>Construido.</div>
-      <p class="section-sub" data-i18n="proj.sub">Proyectos académicos, personales y autodidactas que ponen la teoría en práctica y demuestran capacidad técnica real.</p>
+    <div class="section-head reveal">
+      <span class="section-index">06</span>
+      <span class="section-label" data-i18n="proj.label">Proyectos</span>
     </div>
+    <h2 class="section-title reveal" data-i18n="proj.title">Lo que He<br>Construido.</h2>
+    <p class="section-sub reveal" data-i18n="proj.sub">Proyectos académicos, personales y autodidactas.</p>
 
-    <div class="projects-grid">
-      <div class="project-card reveal">
-        <div class="project-card-header" style="background: linear-gradient(135deg, #EBF0FD, #C3D4FA);">
-          <span class="project-icon">📋</span>
+    <div class="entry-list">
+      <div class="entry-row reveal">
+        <div class="entry-when">
+          <span>HTML · CSS · JavaScript · DB </span>
         </div>
-        <div class="project-card-body">
-          <div class="project-card-title" data-i18n="proj.wip">En Construcción...</div>
-          <div class="project-card-desc"></div>
-          <div class="project-tags">
-            <span class="project-tag">Python</span>
-            <span class="project-tag">CLI</span>
-            <span class="project-tag">JSON</span>
-          </div>
-          <div class="project-card-links">
-            <a href="https://github.com/JuanCFriasA" class="project-link" target="_blank" data-i18n="proj.github">Ver en GitHub →</a>
-          </div>
+        <div class="entry-body">
+          <h3 data-i18n="proj.wip">Farmacia Europa CRM</h3>
+          <a href="https://github.com/JuanCFriasA/ProyectoFinal-Farmacia-Programacion-III" class="link-arrow" target="_blank" data-i18n="proj.github">Ver en GitHub →</a>
         </div>
       </div>
     </div>
+    <div class="entry-list">
+      <div class="entry-row reveal">
+        <div class="entry-when">
+          <span>HTML · Python · Flask </span>
+        </div>
+        <div class="entry-body">
+          <h3 data-i18n="proj.wip">TakingANote-App</h3>
+          <a href="https://github.com/JuanCFriasA/TakingANote-App" class="link-arrow" target="_blank" data-i18n="proj.github">Ver en GitHub →</a>
+        </div>
+      </div>
+    </div>
+    <div class="entry-list">
+      <div class="entry-row reveal">
+        <div class="entry-when">
+          <span>HTML · CSS · JavasScript · JSON </span>
+        </div>
+        <div class="entry-body">
+          <h3 data-i18n="proj.wip">GuaguaTime-RD</h3>
+          <a href="https://github.com/JuanCFriasA/GuaguaTime-RD" class="link-arrow" target="_blank" data-i18n="proj.github">Ver en GitHub →</a>
+        </div>
+      </div>
+    </div>
+
+        <div class="entry-list">
+      <div class="entry-row reveal">
+        <div class="entry-when">
+          <span>TypeScript · React </span>
+        </div>
+        <div class="entry-body">
+          <h3 data-i18n="proj.wip">Midnight-Cruise---Media-Player</h3>
+          <a href="https://github.com/JuanCFriasA/Midnight-Cruise---Media-Player" class="link-arrow" target="_blank" data-i18n="proj.github">Ver en GitHub →</a>
+        </div>
+      </div>
+    </div>
+    
   </section>
+  
 
   <!-- ─── CONTACT ─── -->
   <section id="contact">
-    <div class="contact-inner">
-      <div class="section-label" data-i18n="contact.label">Contacto</div>
-      <div class="section-title contact-title" data-i18n="contact.title">Trabajemos juntos.</div>
-      <p class="section-sub contact-sub" data-i18n="contact.sub">
-        Ya sea que busques un desarrollador junior, técnico de soporte IT, técnico de reparación de hardware,
-        o un pasante listo para empezar.
-      </p>
-      <div class="contact-cards">
-        <a href="mailto:JuanCFriasAlf@gmail.com" class="contact-card">
-          <div class="contact-card-icon">✉️</div>
-          <div class="contact-card-label">Email</div>
-          <div class="contact-card-value">JuanCFriasAlf@gmail.com</div>
-        </a>
-        <a href="tel:+18094274989" class="contact-card">
-          <div class="contact-card-icon">📞</div>
-          <div class="contact-card-label" data-i18n="contact.phone">Teléfono</div>
-          <div class="contact-card-value">+1 809-427-4989</div>
-        </a>
-        <a href="https://linkedin.com/in/juancfriasa" target="_blank" class="contact-card">
-          <div class="contact-card-icon">🔗</div>
-          <div class="contact-card-label">LinkedIn</div>
-          <div class="contact-card-value">linkedin.com/in/juancfriasa</div>
-        </a>
-        <a href="https://github.com/JuanCFriasA" target="_blank" class="contact-card">
-          <div class="contact-card-icon">🐙</div>
-          <div class="contact-card-label">GitHub</div>
-          <div class="contact-card-value">github.com/JuanCFriasA</div>
-        </a>
-      </div>
+    <div class="section-head reveal">
+      <span class="section-index">07</span>
+      <span class="section-label" data-i18n="contact.label">Contacto</span>
+    </div>
+    <h2 class="section-title reveal" data-i18n="contact.title">Trabajemos juntos.</h2>
+    <p class="section-sub reveal" data-i18n="contact.sub">Ya sea que busques un desarrollador junior, técnico de soporte IT, o un pasante listo para empezar.</p>
+
+    <div class="contact-lines reveal">
+      <a href="mailto:JuanCFriasAlf@gmail.com" class="contact-line">
+        <span class="contact-line-label">Email</span>
+        <span class="contact-line-value">JuanCFriasAlf@gmail.com</span>
+      </a>
+      <a href="tel:+18094274989" class="contact-line">
+        <span class="contact-line-label" data-i18n="contact.phone">Teléfono</span>
+        <span class="contact-line-value">+1 809-427-4989</span>
+      </a>
+      <a href="https://linkedin.com/in/juancfriasa" target="_blank" class="contact-line">
+        <span class="contact-line-label">LinkedIn</span>
+        <span class="contact-line-value">linkedin.com/in/juancfriasa</span>
+      </a>
+      <a href="https://github.com/JuanCFriasA" target="_blank" class="contact-line">
+        <span class="contact-line-label">GitHub</span>
+        <span class="contact-line-value">github.com/JuanCFriasA</span>
+      </a>
+    </div>
+
+    <div class="contact-avail reveal">
+      <i class="dot"></i><span data-i18n="contact.avail">Disponible para pasantías y roles de nivel inicial</span>
     </div>
   </section>
 
-  <!-- ─── FOOTER ─── -->
-  <footer>
-    <div class="footer-name">Juan Carlos Frias Alfonso</div>
-    <div class="footer-copy" data-i18n="footer.copy">Informático · Técnico Electrónico · Santo Domingo, RD</div>
-  </footer>
+</main>
 
-  <script src="main.js"></script>
-  <script src="i18n.js"></script>
+<!-- ─── FOOTER ─── -->
+<footer>
+  <span class="footer-name">Juan Carlos Frias Alfonso</span>
+  <span class="footer-copy" data-i18n="footer.copy">Informático · Técnico Electrónico · Santo Domingo, RD</span>
+</footer>
+
+<script src="main.js"></script>
+<script src="i18n.js"></script>
 </body>
 </html>
